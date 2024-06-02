@@ -9,8 +9,6 @@ def homepage():
     return render_template("index.html")
 
 
-
-
 @app.route('/weatherapp' , methods = ['POST' , "GET"])
 def get_weatherdate():
     url = "http://api.weatherapi.com/v1/current.json"
@@ -21,6 +19,7 @@ def get_weatherdate():
     }
 
     row_data = requests.get(url ,params = parameters)   
+    city = Data['name'] #change
     Data = row_data.json()
 
     return f"report : {Data}"
