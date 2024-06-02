@@ -1,0 +1,6 @@
+#it is use to keep all dependancy that we would like to install.(keep system ready for deployment on cloud)
+
+Flask
+gunicorn
+requests
+
